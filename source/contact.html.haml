@@ -1,0 +1,43 @@
+---
+title: Contact the Bucky Box Team
+category: about
+---
+
+.container.text-center
+  = partial "about_nav_bar"
+
+  .row.voffset
+    .col-md-6.col-md-offset-3
+      %h2 Contact us
+
+  .row.vertical-divider
+    .col-xs-6.text-right{style: "padding-top: 1em"}
+      %strong.text-muted.small-caps technical support
+    .col-xs-6.text-left{style: "padding-top: 1em"}
+      = mail_to "support@buckybox.com"
+  .row.vertical-divider
+    .col-xs-6.text-right{style: "padding-top: 2em; padding-bottom: 1em"}
+      %strong.text-muted.small-caps custom development
+    .col-xs-6.text-left{style: "padding-top: 2em; padding-bottom: 1em"}
+      = mail_to "bespoke@buckybox.com"
+
+  .row.voffset
+    .col-md-12
+      .social-icons
+        = link_to "https://facebook.com/buckybox", target: "_blank" do
+          %span.social.facebook
+        = link_to "https://twitter.com/buckybox", target: "_blank" do
+          %span.social.twitter
+        = link_to "https://www.linkedin.com/company/bucky-box", target: "_blank" do
+          %span.social.linked_in
+
+  .row.voffset-2
+    .col-md-6.col-md-offset-3
+      %h2 Get a personal demonstration
+
+  .row
+    .col-md-6.col-md-offset-3
+      Email us on
+      = mail_to "sales@buckybox.com"
+      for a personal demonstration via voice and screencast to discuss how Bucky Box can work for you (please include your timezone).
+

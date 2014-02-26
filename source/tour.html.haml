@@ -1,0 +1,304 @@
+---
+title: Feature Tour - Powering Local Food Enterprises
+description: Bucky Box has all the features to run your local food enterprise, we help you sell food, manage customers, fulfil orders and handle payments
+---
+
+.container.text-center
+  .row
+    .col-md-6.col-md-offset-3
+      %h3 Powering your local food enterprise
+      We have built all of your daily operations into a simple to use web app that customers love and which saves you time.
+
+  #tour-four-features.row.voffset.vertical-divider
+    .col-xs-12.col-sm-3
+      %p= image_tag "icon-sml-web-store.png"
+      %p.voffset Your customers place orders through your easy to use web store.
+    .col-xs-12.col-sm-3
+      %p= image_tag "icon-sml-customer-database.png"
+      %p.voffset Manage your customers with our powerful and quick-to-use database.
+    .col-xs-12.col-sm-3
+      %p= image_tag "icon-sml-deliveries.png"
+      %p.voffset Orders are scheduled, packing lists are made, and deliveries are reconciled.
+    .col-xs-12.col-sm-3
+      %p= image_tag "icon-sml-payments.png"
+      %p.voffset Bank deposits and credit cards are coming very soon.
+
+  .row.custom-navbar.voffset-2.hidden-xs
+    .col-md-12
+      .btn-group
+        %a.btn.btn-secondary.btn-lg{href: "#tour-web-store"} Web Store
+        %a.btn.btn-secondary.btn-lg{href: "#tour-customers"} Manage Customers
+        %a.btn.btn-secondary.btn-lg{href: "#tour-fulfilment"} Fulfilment
+        %a.btn.btn-secondary.btn-lg{href: "#tour-payments"} Payments
+        %a.btn.btn-secondary.btn-lg{href: "#tour-features"} Features
+        %a.btn.btn-primary.btn-lg.sign_up{href: "javascript:void(0)"} Sign Up for Free
+
+  #tour-web-store.row.tour-section{style: "margin-top: 0"}
+    .col-md-6.col-md-offset-3
+      %p= image_tag "i-web-store.png"
+      %h4 A convenient customer experience
+      %p Bucky Box lets you offer your customers around-the-clock shopping and access to their account information 24/7.
+
+  #tour-web-store-contents
+    .row.voffset
+      .section.col-md-6.text-left
+        .row
+          .col-sm-3.hidden-xs.hidden-sm.text-center
+            = image_tag "icon-web-store.png"
+          .description.col-sm-12.col-md-9.text-center-sm
+            %h4 Web Store
+            %p Your customers get the convenience of ordering online while you save time not having to manage customer orders.
+            %p The web store supports mystery boxes, repeating standing orders, exclusions and substitutes, as well as extra items.
+            %p Just set up your products, flip the switch and your web store is ready to take orders. No hosting fees, no HTML, no hassle.
+      .image.col-md-6.text-center-sm
+        = image_tag "screen-web-store.png", class: "img-responsive"
+
+    .row.voffset
+      .section.col-md-6.text-left
+        .row
+          .col-sm-3.hidden-xs.hidden-sm.text-center
+            = image_tag "icon-customer-dashboard.png"
+          .description.col-sm-12.col-md-9.text-center-sm
+            %h4 Customer Dashboard
+            %p Your customers get a personal dashboard where they can login and update their orders, amend their delivery address, and check on their account transactions.
+            %p It works for them 24 hours a day, so you don't have to.
+      .image.col-md-6.text-center-sm
+        = image_tag "screen-customer-dashboard.png", class: "img-responsive"
+
+  #tour-customers.row.tour-section
+    .col-md-6.col-md-offset-3
+      %p= image_tag "i-customer-database.png"
+      %h4 A fully featured customer database
+      %p Manage your customer support simply and quickly with an easy-to-use customer database backed by powerful features.
+
+  #tour-customer-database
+    .row.voffset
+      .box.col-md-6
+        .row.text-right
+          .box-description.top.left.col-xs-3.col-sm-3.col-md-5.col-lg-4
+            .thumbnail.text-center
+              = image_tag "customer-list.png", class: "img-responsive"
+              .caption.small
+                Your
+                %strong Customer List
+                in a simple glance
+          = image_tag "screen-customer-list.png", class: "img-responsive"
+      .box.col-md-6
+        .row.text-left
+          .box-description.top.right.col-xs-3.col-sm-3.col-md-5.col-lg-4
+            .thumbnail.text-center
+              = image_tag "icon-group-email.png", class: "img-responsive"
+              .caption.small
+                %strong Group Email
+                your customers with templates
+          = image_tag "screen-group-email.png", class: "img-responsive"
+    .row.voffset
+      .box.col-md-6
+        .row.text-right
+          .box-description.bottom.left.col-xs-3.col-sm-3.col-md-5.col-lg-4
+            .thumbnail.text-center
+              = image_tag "icon-customer-database.png", class: "img-responsive"
+              .caption.small
+                %strong Customer Accounts
+                are easy to edit
+          = image_tag "screen-customer-account.png", class: "img-responsive"
+      .box.col-md-6
+        .row.text-left
+          .box-description.bottom.right.col-xs-3.col-sm-3.col-md-5.col-lg-4
+            .thumbnail.text-center
+              = image_tag "icon-notifications.png", class: "img-responsive"
+              .caption.small
+                %strong Activity Notifications
+                to keep you up to date
+          = image_tag "screen-notifications.png", class: "img-responsive"
+
+  #tour-fulfilment.row.tour-section
+    .col-md-6.col-md-offset-3
+      %p= image_tag "i-deliveries.png"
+      %h4 Fulfilment made easy
+      %p
+        Customer fulfilments are scheduled by date and grouped by delivery service. From here you can export into packing slips, courier labels, and delivery lists. Finally, you may reconcile the fulfilment as being completed.
+        You can reconcile your deliveries afterwards.
+
+  #tour-deliveries.row
+    .box.col-md-12
+      .row
+        .box-description.hidden-xs{style: "top: -115px; right: 32%"}
+          .thumbnail.text-center
+            = image_tag "icon-delivery-day.png"
+            .caption.small Select your delivery day
+            .index.bottom.left 1
+        .box-description.hidden-xs{style: "top: 40px; left: 8%"}
+          .thumbnail.text-center
+            = image_tag "icon-packing-details.png"
+            .caption.small Export your packing details
+            .index.bottom.right 2
+        .box-description.hidden-xs{style: "top: 295px; left: 8%"}
+          .thumbnail.text-center
+            = image_tag "icon-deliveries.png"
+            .caption.small Make your deliveries
+            .index.bottom.right 3
+        .box-description.hidden-xs{style: "top: 295px; right: 23%"}
+          .thumbnail.text-center
+            = image_tag "icon-reconcile-deliveries.png"
+            .caption.small Reconcile your deliveries
+            .index.top.left 4
+        = image_tag "screen-zoom-deliveries.png", class: "img-responsive", style: "margin: auto"
+
+
+  #tour-payments.row.tour-section
+    .col-md-6.col-md-offset-3
+      %p= image_tag "i-payments.png"
+      %h4 Track customer payments
+      %p
+        Upload your Internet banking transactions and let Bucky Box do the heavy lifting.
+        It will search out payments and reconcile them with your customers.
+        Anything it's not sure of, it will mark in yellow so you can teach it what to look for in future payments.
+
+  .row.voffset
+    .col-md-12
+      = image_tag "screen-zoom-payments-reconciliation.png", class: "img-responsive", style: "margin: auto"
+
+  #tour-features
+    .row.tour-section
+      .col-md-12
+        %h3 Key Bucky Box features
+
+    .row.text-left
+      - content_for :feature do |params|
+        .well.feature
+          .row
+            .col-sm-2.col-md-1.hidden-xs
+              - if params[:icon]
+                %span{class: "glyphicons #{params.fetch(:icon)}"}
+              - else
+                = image_tag params.fetch(:image)
+            .visible-xs.pull-right{style: "margin-right: -10px; padding: 0 0 10px 10px"}
+              - if params[:icon]
+                %span{class: "glyphicons #{params.fetch(:icon)}"}
+              - else
+                = image_tag params.fetch(:image), style: "margin-right: 20px"
+            .col-sm-10.col-md-11
+              %strong #{params.fetch(:label)}
+              %p #{params.fetch(:description)}
+
+      .col-sm-6
+        %h4.voffset-2 Web Store
+
+        = yield_content :feature, label: "Boxes", icon: "inbox",
+          description: "Boxes form the basis of what appears on your web store home page. Boxes can comprise anything you want to sell. Customers can add extra items into their boxes. For mystery box schemes, customers can optionally exclude and substitute items."
+
+        = yield_content :feature, label: "Box Items, Excludes and Substitutes", icon: "inbox_minus",
+          description: "For veg box schemes where a box may contain seasonal produce that differs week to week, you can set up a list of Box Items, which is a list of all the possible items that may appear in your boxes (i.e. all the fresh produce that may be available for purchase during the season). Customers can opt to exclude and substitute these items if you activate this feature. Limits can be set on how many items can be excluded or substituted."
+
+        = yield_content :feature, label: "Extra Items", icon: "plus",
+          description: "Customers can add extra items into their boxes (such as coffee, bread, eggs etc.). Extras have a unit quantity and a price."
+
+        = yield_content :feature, label: "Standing Orders, Single Orders", icon: "refresh",
+          description: "Orders from customers can be one-off or standing orders in weekly, fortnightly, or even monthly cycles."
+
+        %h4.voffset-2 Customer Dashboard
+
+        = yield_content :feature, label: "Dashboard", icon: "dashboard",
+          description: "Your customers can log in 24/7 to check on their account statement, review their active orders, update their delivery address or make a payment."
+
+        = yield_content :feature, label: "Pausing Standing Orders", icon: "pause",
+          description: "Customers can log in and pause their standing orders directly, saving you time. This feature may be disabled if you prefer to have direct control."
+
+        = yield_content :feature, label: "Account Statement", icon: "justify",
+          description: "Customers get a full realtime online account statement of all of their transactions which saves billing confusion."
+
+        = yield_content :feature, label: "Delivery Address", icon: "home",
+          description: "Customers can update their delivery address directly, you’ll get a notification of any change in address."
+
+        = yield_content :feature, label: "View and Update Orders", icon: "cart_in",
+          description: "Customers can directly update or add new orders to their account automatically without contacting you, this saves you time and gives your customers 24/7 convenience. This feature can be disabled if you want to stop changes to customer orders."
+
+        %h4.voffset-2 Payments
+
+        = yield_content :feature, label: "Cash on Delivery", icon: "usd",
+          description: "Accept cash on delivery either by reconciling full payment in your deliveries screen or add a manual transaction into a customer's account."
+
+        = yield_content :feature, label: "Bank Deposits", icon: "bank",
+          description: "Import your banking transactions from Internet Banking and Bucky Box will automatically match and reconcile customer payments to their accounts. Bucky Box learns from past history and just gets better over time. Nearly all banks are supported by Bucky Box -  as long as your bank has a CSV transaction export, we can get you up and running in minutes."
+
+        = yield_content :feature, label: "PayPal", image: "glyph-paypal.png",
+          description: "Bucky Box can import your PayPal received payments and reconcile them against customer accounts."
+
+        = yield_content :feature, label: "Direct Debit and Others", icon: "usd",
+          description: "No matter what other payment system you use, as long as you can get a CSV export from your system, we can import the transactions into Bucky Box and match the payments to customer accounts. Our support team can set up a new format in minutes."
+
+        = yield_content :feature, label: "Credit Card", icon: "credit_card",
+          description: "Bucky Box is currently working on a direct credit card gateway that will seamlessly integrate into the web store and allow ongoing payments from standing orders to be deducted at the push of a button. Best of all you’ll be able to set up as a credit card merchant easily and get a lower rate on the credit card merchant fees."
+
+        %h4.voffset-2 Email System
+
+        = yield_content :feature, label: "Group Email", icon: "envelope",
+          description: "Send emails to individuals or to whole groups when used in conjunction with Search and Tags. An indispensable feature for sending out welcome messages and weekly newsletters, chasing late payments, and even notifying about upcoming deliveries. Bye bye MailChimp, hello Bucky Box."
+
+        = yield_content :feature, label: "Email Templates and Merge-Tags", icon: "embed",
+          description: "You can create your own email templates and use merge-tags to insert customised content specific to an individual customer like “Hi {first_name}, you account balance of {account_balance} is now due”."
+
+        = yield_content :feature, label: "Delivery Integration", icon: "truck",
+          description: "The email system is not only integrated into the customer database but also into the delivery section so you can contact customers with pending deliveries on a particular date or delivery run. Useful for notification of upcoming deliveries or even last minute changes to the delivery times."
+
+      .col-sm-6
+        %h4.voffset-2 Customer Database
+
+        = yield_content :feature, label: "Customer List", icon: "group",
+          description: "You can view all of your with a single glance, alongside their account balance, next delivery, and custom tags."
+
+        = yield_content :feature, label: "Customer Search", icon: "search",
+          description: "Quickly find any customer in your database with the customer search function."
+
+        = yield_content :feature, label: "Tags", icon: "tags",
+          description: "Create your own customer groupings and workflows by applying tags to your customers. These tags appear against customers in both the customer account section and delivery section."
+
+        = yield_content :feature, label: "Notifications", icon: "bell",
+          description: "You’ll be notified of all key events like new customers, new orders, and changes of deliveries with Bucky Box’s notification system."
+
+        = yield_content :feature, label: "Minimum Balance and Halted Deliveries", icon: "circle_remove",
+          description: "You can assign minimum balances to customers -  if they reach their minimum their deliveries will be halted. This will be visible on their account and you’ll be notified. There is the option of a notification email for your customer as well."
+
+        = yield_content :feature, label: "Account Transactions", icon: "usd",
+          description: "All transactions from a customer can be seen at a glance. We track transaction dates as well as the processing date of an order. You can manually apply a transaction at the touch of a button."
+
+        = yield_content :feature, label: "Customer Discounts", image: "glyph-discount.png",
+          description: "For any customer, you can apply a percentage discount that applies to all activity on their account."
+
+        = yield_content :feature, label: "Recent Activity History", icon: "history",
+          description: "We track every interaction in a customer account via an activity feed. This is great for sales support when you need to uncover what a customer actually ordered and paid for, as well as keep track of their communication with you."
+
+        = yield_content :feature, label: "Delivery Notes", icon: "truck",
+          description: "Delivery notes are captured at the web store checkout. These notes appears in your packing and delivery exports so customers can pass on delivery instructions."
+
+        = yield_content :feature, label: "Packing Notes", icon: "inbox_in",
+          description: "When customers request alterations like “no leafy greens or large potatoes” you can note these requirements in your Packing Notes which then appear in your packing exports."
+
+        = yield_content :feature, label: "Customer Notes", icon: "edit",
+          description: "Attach a note to any customer, useful for whatever workflows you invent."
+
+        %h4.voffset-2 Delivery Workflow
+
+        = yield_content :feature, label: "Calendar and Scheduling", icon: "calendar",
+          description: "All information from the web store and customer database such as orders, cancellations, and pauses in standing orders are used to generate a calendar of upcoming deliveries. This means you can get a good hold on your upcoming delivery days."
+
+        = yield_content :feature, label: "Packing", icon: "inbox_in",
+          description: "Packing sheets and courier labels can be exported from the system to be printed via mail-merge."
+
+        = yield_content :feature, label: "Delivery Planning", icon: "notes_2",
+          description: "Bucky Box uses a simple drag and drop system for classifying delivery sequences and utilises a delivery sequence number to go on courier labels so you can load up the truck or van in the right order."
+
+        = yield_content :feature, label: "Delivery Services and Pickups", icon: "truck",
+          description: "Customers are placed into Delivery Service / Pickup Points which best serves their area. A Delivery Service or Pickup Point can be assigned the day of week they operate and also a delivery fee."
+
+        = yield_content :feature, label: "Delivery Reconciliation", icon: "ok_2",
+          description: "Every delivery can be marked as either delivered or cancelled. The reconciliations from these tags impact your customer's account in real-time and their accounts are deducted (or reversed for cancelled deliveries) accordingly."
+
+        = yield_content :feature, label: "Cash on Delivery Reconciliation", icon: "ok_2",
+          description: "Customers who paid Cash on Delivery can be reconciled immediately with a simple click."
+
+  .row.voffset
+    .col-md-12
+      %a.btn.btn-lg.btn-primary.sign_up{href: "javascript:void(0)", role: "button"} Sign Up for Free
+

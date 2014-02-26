@@ -1,0 +1,173 @@
+---
+title: Company History and Timeline
+---
+
+.container.text-center
+  = partial "about_nav_bar"
+
+  .row.voffset
+    .col-md-8.col-md-offset-2
+      %h3 We started Bucky Box to make it easy to run a successful local food delivery business.
+
+  .row.voffset
+    .col-md-8.col-md-offset-2
+      Since 2011 Bucky Box has powered all manner of local food deliveries including vegetable box schemes, artisan breadmakers, community supported agriculture farming, food co-operatives, and recipe bag subscriptions.
+      And everyday we're working hard to support more types of operations.
+
+  .row.voffset
+    .col-md-12.timeline
+      :ruby
+        def story_image(image, extra_css = "")
+          image = "i-story-#{image}"
+          abbreviated_position = image.match(/-(..)\.\w+\z/)[1]
+
+          positions = []
+          while letter = abbreviated_position.slice!(0)
+            %w(top bottom center left right).each do |position|
+              positions << position if letter == position[0]
+            end
+          end
+          position = positions.join(" ")
+
+          css_path = File.join(images_dir, image)
+          fs_path = File.join(source_dir, css_path)
+          _, height = FastImage.size(fs_path)
+
+          <<-CSS
+            background-image:url('#{css_path}');
+            background-position: #{position};
+            min-height: #{height}px;
+            #{extra_css}
+          CSS
+        end
+
+      - content_for(:event) do |params|
+        .row.event
+          - if params.fetch(:position) == :right
+            .col-md-6.col-md-offset-6{style: "margin-top: #{params.fetch(:vertical_offset)}em"}
+              .row
+                .col-sm-3.visible-sm.image{style: story_image(params.fetch(:image), params[:image_css])}
+                .col-xs-12.col-sm-9.text-left.text
+                  %h5.month= params.fetch(:month)
+                  %h4= params.fetch(:title)
+                  %p.description= params.fetch(:description)
+                .col-sm-3.hidden-sm.hidden-xs.image{style: story_image(params.fetch(:image), params[:image_css])}
+          - else
+            .col-md-6{style: "margin-top: #{params.fetch(:vertical_offset)}em"}
+              .row
+                .col-sm-3.hidden-xs.image{style: story_image(params.fetch(:image), params[:image_css])}
+                .col-xs-12.col-sm-9.text-left.text
+                  %h5.month.text-right= params.fetch(:month)
+                  %h4= params.fetch(:title)
+                  %p.description= params.fetch(:description)
+
+      .row
+        %h3.year 2011
+
+      = yield_content :event,
+        position: :right,
+        vertical_offset: 0,
+        title: "Prototype Created",
+        month: "April",
+        image: "prototype-tl.png",
+        description: "Will Lau fresh from helping friends deliver local food to doors discovers a big lack of software, he talks to compulsive do-gooder, Joshua Vial, and the two assemble a rag team of volunteers who head to a cabin in the woods for 12 days to build a prototype system."
+
+      = yield_content :event,
+        position: :left,
+        vertical_offset: -6,
+        title: "Starting Up",
+        month: "August",
+        image: "enspiral-tl.png",
+        description: "Joshua Vial raises some seed funding between friends and colleges and incorporates Bucky Box as a startup within the Enspiral Network, Joshua's other main occupation."
+
+      = yield_content :event,
+        position: :right,
+        vertical_offset: -2,
+        title: "Second Round Funding",
+        month: "December",
+        image: "seed-funding-cc.png",
+        description: "Will Lau provides a second funding round and moves to Wellington, NZ to lead the startup."
+
+      .row
+        %h3.year 2012
+
+      = yield_content :event,
+        position: :left,
+        vertical_offset: 0,
+        title: "Bucky Box visits India",
+        month: "April",
+        image: "india-cc.png",
+        description: "By following the magic, Bucky Box sends a team of four to India to study the food system for six weeks. They bring back a soulful long-term purpose and vision."
+
+      = yield_content :event,
+        position: :right,
+        vertical_offset: -6,
+        title: "Private Testing",
+        month: "May",
+        image: "beta-cc.png",
+        description: "Bucky Box starts private testing with local food delivery businesses in Australia and New Zealand."
+
+      = yield_content :event,
+        position: :left,
+        vertical_offset: -3,
+        title: "Bucky Box wins R&amp;D Grant",
+        month: "August",
+        image: "government-grant-cc.png",
+        description: "Bucky Box is awarded a government R&amp;D grant from the Ministry of Science and Innovation (Callaghan Innovation)."
+
+      = yield_content :event,
+        position: :right,
+        vertical_offset: -4,
+        title: "Public Launch",
+        month: "November",
+        image: "public-launch-cc.png",
+        description: "With great joy and merriment Bucky Box is launched to the general public."
+
+      = yield_content :event,
+        position: :left,
+        vertical_offset: -5,
+        title: "International Banking Support",
+        month: "December",
+        image: "banks-worldwide-br.png",
+        image_css: "margin-top: 3.5em;",
+      description: "With some Jordan Carter's brilliance, a scripting engine is rolled out allowing Bucky Box to set up bank transactions from banks worldwide easily."
+
+      .row
+        %h3.year 2013
+
+      = yield_content :event,
+        position: :right,
+        vertical_offset: 0,
+        title: "Bucky Box Runs in Three Countries",
+        month: "January",
+        image: "3-countries-cc.png",
+        description: "Three months on from public availability, Bucky Box powers local food operations in three countries. A collective sign of relief is heard from people in New Zealand, Australia and the UK."
+
+      = yield_content :event,
+        position: :left,
+        vertical_offset: -9,
+        title: "Local Food Challenge",
+        month: "February",
+        image: "local-food-startup-challenge-cc.png",
+        description: "Sam Rye opens the $500k local food startup challenge to support the creation of new local food businesses."
+
+      = yield_content :event,
+        position: :right,
+        vertical_offset: 1,
+        title: "Email Integration",
+        month: "June",
+        image: "group-email-br.png",
+        image_css: "margin-top: 2.5em;",
+        description: "Cédric rolls out the Bucky Box emailer, making customer engagement much easier allowing for templated emails right from the customer database."
+
+      = yield_content :event,
+        position: :left,
+        vertical_offset: -4,
+        title: "Bucky Box API",
+        month: "November",
+        image: "bucky-api-br.png",
+        description: "By popular demand, Josh D. opens up Bucky Box to third party developers via an API."
+
+      .row.hidden-xs.hidden-sm
+        %h3.year 2014
+

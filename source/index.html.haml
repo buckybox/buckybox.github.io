@@ -1,0 +1,147 @@
+---
+title: Software for community supported agriculture, food co-ops, artisan bakers, vegetable box schemes and local food deliveries
+description: Bucky Box, simple to use software for your CSA, Vegetable Box Scheme, Food Co-op, Artisan Bakery or Food Hub to automate orders, billing and delivery logistics
+---
+
+.container-fluid{style: "margin-top: -30px"}
+  .row.text-center
+    #carousel.carousel.slide{"data-ride" => "carousel"}
+      .carousel-caption
+        .btn-group
+          %a.btn.btn-lg.btn-secondary{href: "tour.html", role: "button"} Software for Local Food Enterprises
+          %a.btn.btn-lg.btn-primary.sign_up{href: "javascript:void(0)", role: "button"} Sign Up for Free
+
+      %ol.carousel-indicators
+        %li.active{"data-target" => "#carousel", "data-slide-to" => "0"}
+        %li{"data-target" => "#carousel", "data-slide-to" => "1"}
+        %li{"data-target" => "#carousel", "data-slide-to" => "2"}
+
+      .carousel-inner
+        - content_for :carousel_item do |params|
+          .item{class: ("active" if params.fetch(:active, false))}
+            = image_tag params.fetch(:image), class: "img-responsive", alt: params[:image_alt]
+
+        = yield_content :carousel_item, image: "hero-nz-peoples-bread-artisan-bakers.jpg", image_alt: "Bucky Box software helps Artisan Bakers, The Peoples Bread Company", active: true
+        = yield_content :carousel_item, image: "hero-au-mpcheap-vegbox-deliveries.jpg", image_alt: "Vegetable box deliveries by MP Cheap Fruit and Veg grew incredibly quickly with Bucky Box software"
+        = yield_content :carousel_item, image: "hero-nz-the-local-vegbox-deliveries.jpg", image_alt: "The back office administration is now quick and easy for the Local Veg Box, a UK vegetable box scheme"
+
+      = link_to "#carousel", class: "carousel-control left", "data-slide" => "prev" do
+        %span.glyphicon.glyphicon-chevron-left
+
+      = link_to "#carousel", class: "carousel-control right", "data-slide" => "next" do
+        %span.glyphicon.glyphicon-chevron-right
+
+
+.container
+  .row.voffset-2
+    %h3.text-center Powering Local Food
+
+  #home-powering-local-food
+    - content_for :mission do |params|
+      .box.col-sm-6{class: ("text-right-sm" if params.fetch(:side) == :right)}
+        .panel.panel-default
+          .panel-body
+            .row
+              .col-xs-4.visible-xs
+                = image_tag params.fetch(:image), class: "img-responsive"
+              - if params.fetch(:side) == :right
+                .col-xs-4.hidden-xs
+                  = image_tag params.fetch(:image), class: "img-responsive"
+              .col-xs-8
+                %h4 #{params.fetch(:label)}
+                %p #{params.fetch(:description)}
+              - if params.fetch(:side) == :left
+                .col-xs-4.hidden-xs
+                  = image_tag params.fetch(:image), class: "img-responsive"
+
+    .row
+      = yield_content :mission, side: :left, image: "i-web-store.png", label: "Web Store", description: "Your customers place single or standing orders through an easy to set up web store."
+
+      = yield_content :mission, side: :right, image: "i-customer-database.png", label: "Customer Database", description: "Each of your customers can track their account balance, status and entire history through the customer database."
+
+    .row.text-center
+      .col-md-12.visible-md.visible-lg{style: "margin-top: -70px; margin-bottom: -70px; z-index: 1"}
+        = image_tag "i-loop.png"
+
+    .row
+      = yield_content :mission, side: :left, image: "i-payments.png", label: "Payments", description: "All manner of payment methods are available, and each payment is reconciled with the customer's account."
+
+      = yield_content :mission, side: :right, image: "i-deliveries.png", label: "Fulfilment", description: "Deliveries and pickups are scheduled, packing lists are generated, and deliveries are reconciled."
+
+  .row.voffset-2
+    %h3.text-center Saving your time
+
+  .panel.panel-default.text-center.voffset
+    .panel-body
+    .row
+      .col-md-2.voffset
+        %h3 2 days
+        .text-muted Spreadsheets
+      .col-md-8
+        = image_tag "i-time-savings.png", class: "img-responsive"
+      .col-md-2.voffset
+        %h3 2 hours
+        .text-muted Bucky Box
+    .row.voffset
+      .col-md-8.col-md-offset-2
+        %p
+          A typical food delivery business can spend up to 2 days per week on customer support and business administration.
+          With Bucky Box automating the most common tasks, we can get this down to 2 hours per week.
+
+  .row.text-center.voffset-2
+    .col-md-4.col-md-offset-4
+      %h3 Who uses Bucky Box?
+      %p Bucky Box works best for food enterprises selling by recurring subscription directly to customers.
+
+  #home-who-uses-bb
+    .row.text-center.voffset
+      .operation.col-xs-6.col-sm-4
+        %div{style: "background-image: url(images/usecase-community-supported-agriculture.jpg)"}
+          .text-container
+            .text Community Supported Agriculture
+      .operation.col-xs-6.col-sm-4
+        %div{style: "background-image: url(images/usecase-vegetable-box-scheme.jpg)"}
+          .text-container
+            .text Veg Box Schemes
+      .operation.col-xs-6.col-sm-4
+        %div{style: "background-image: url(images/usecase-recipe-food-bag.jpg)"}
+          .text-container
+            .text Recipe Food Bag Schemes
+      .operation.col-xs-6.col-sm-4
+        %div{style: "background-image: url(images/usecase-lunch-deliveries.jpg)"}
+          .text-container
+            .text Lunch Deliveries
+      .operation.col-xs-6.col-sm-4
+        %div{style: "background-image: url(images/usecase-artisan-bread.jpg)"}
+          .text-container
+            .text Artisan Bakers
+      .operation.col-xs-6.col-sm-4
+        %div{style: "background-image: url(images/usecase-food-coop-and-buyers-club.jpg)"}
+          .text-container
+            .text Food Co-op
+      .operation.col-xs-6.col-xs-offset-3.col-sm-4.col-sm-offset-4
+        %div{style: "background: #71AACD"}
+          .text-container{style: "height: 157px"}
+            .text
+              %strong= mail_to "support@buckybox.com", "Your Operations?"
+
+  .row.text-center.voffset-3
+    - content_for :press do |params|
+      .col-xs-6.col-sm-4.col-lg-2.press
+        %p
+          = link_to params.fetch(:link), target: "_blank" do
+            - image_tag "press-#{params.fetch(:image)}.png", class: "img-responsive", style: "margin: auto"
+
+    = yield_content :press, image: "fastcompany", link: "http://www.fastcoexist.com/1679499/buckybox-helping-farmers-get-fresh-food-to-your-table"
+    = yield_content :press, image: "springwise", link: "http://localfood.buckybox.com/2012/08/springwise-features-bucky-box-software-firm-focuses-on-helping-small-farms/"
+    = yield_content :press, image: "unlimited", link: "http://localfood.buckybox.com/2012/06/unlimited-magazine-social-enterprise-nz/"
+    = yield_content :press, image: "idealog", link: "http://www.idealog.co.nz/blog/2012/02/bucky-box"
+    = yield_content :press, image: "greenfutures", link: "http://www.forumforthefuture.org/greenfutures/articles/web-based-app-simplifies-food-box-admin"
+    = yield_content :press, image: "seedstock", link: "http://seedstock.com/2012/01/16/nz-social-enterprise-bucky-box-to-simplify-distribution-for-sustainable-farmers-with-web-based-application/"
+
+  .row.text-center.voffset-2
+    .col-md-12
+      .btn-group.voffset
+        %a.btn.btn-lg.btn-primary.sign_up{href: "javascript:void(0)", role: "button"} Sign Up for Free
+        %a.btn.btn-lg.btn-secondary{href: "tour.html", role: "button"} Take the Tour &rarr;
+

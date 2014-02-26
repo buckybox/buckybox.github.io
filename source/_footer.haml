@@ -1,0 +1,55 @@
+%footer#footer
+  .container-fluid
+    %hr
+
+  .container
+    - content_for :links do
+      .col-xs-12.col-sm-4
+        .row
+          .column.col-xs-4
+            %ul.list-unstyled
+              %li= link_to "About", "/about.html"
+              %li= link_to "Team", "/team.html"
+              %li= link_to "Contact", "/contact.html"
+              -# %li= link_to "Blog", "#"
+          .column.col-xs-4
+            %ul.list-unstyled
+              %li= link_to "Media Kit", "/downloads/bucky-box-media-kit.zip"
+              -# %li= link_to "Jobs", "jobs.html"
+              %li= link_to "Changelog", "http://changelog.buckybox.com/"
+              %li= link_to "API", "https://api.buckybox.com/docs"
+              -# %li= link_to "Status", "#"
+          .column.col-xs-4
+            %ul.list-unstyled
+              %li= link_to "Log In", "https://my.buckybox.com/distributors/sign_in", target: "_blank"
+              %li= link_to "Privacy", "/privacy.html"
+              %li= link_to "Help", "http://help.buckybox.com/user-manual/"
+      .col-xs-10.col-xs-offset-1.col-sm-5.col-sm-offset-3
+        .row
+          %form{action: "http://buckybox.us2.list-manage.com/subscribe/post?u=d0edf30e8c43095234b807ef4&amp;id=aee7e97133", method: "post", target: "_blank"}
+            .input-group
+              %span{style: "display: table-cell; position: absolute; left: 8px; top: 8px; z-index: 10"}
+                %span.glyphicon.glyphicon-envelope{style: "opacity: 0.5"}
+              %input{type: "email", name: "EMAIL", class: "form-control", placeholder: "Subscribe to our newsletter", required: true, style: "padding-left: 25px"}
+              / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              %div{style: "position: absolute; left: -5000px;"}
+                %input{type: "text", name: "b_d0edf30e8c43095234b807ef4_aee7e97133", value: ""}
+              %span.input-group-btn.hidden-xs
+                %input.btn.btn-default{type: "submit", value: "Subscribe", name: "subscribe"}
+        .row{style: "margin-top: .5em"}
+          Follow Bucky Box on
+          = link_to "Facebook", "https://www.facebook.com/buckybox", target: "_blank"
+          and
+          = link_to "Twitter", "https://twitter.com/buckybox", target: "_blank"
+
+    #footer-links.row
+      .visible-xs.text-center
+        = yield_content :links
+      .hidden-xs
+        = yield_content :links
+
+    %hr
+
+    .row.text-center
+      %p &copy; Bucky Box&trade;
+
