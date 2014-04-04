@@ -35,7 +35,10 @@ configure :build do
   # activate :minify_html # FIXME
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: [
+    /\Aimages\/(email|uservoice)\/.*\Z/,
+    /\Aimages\/logo-bucky-grey\.png\Z/,
+  ]
 
   # Use relative URLs
   activate :relative_assets
