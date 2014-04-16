@@ -18,8 +18,8 @@
               = link_to "Tour", "/tour.html"
             %li{class: "#{'active' if current_path == 'pricing.html'}"}
               = link_to "Pricing", "/pricing.html"
-            -# %li
-            -#   = link_to "Blog", "#"
+            %li
+              = link_to "Blog", "http://blog.buckybox.com/"
             %li{class: "#{'active' if current_path == 'about.html' || current_page.data.category == 'about'}"}
               = link_to "About", "/about.html"
           %ul.nav.navbar-nav.navbar-right
