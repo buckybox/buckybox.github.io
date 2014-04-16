@@ -38,6 +38,7 @@ configure :build do
   activate :asset_hash, ignore: [
     /\Aimages\/(email|uservoice)\/.*\Z/,
     /\Aimages\/logo-bucky-grey\.png\Z/,
+    /\Astylesheets\/all\.css\Z/, # hot-linked from the blog
   ]
 
   # Use relative URLs
