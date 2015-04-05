@@ -13,7 +13,7 @@
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300,400" %>
     <%= stylesheet_link_tag "all" %>
 
-    <% pages.each do |page| %><link rel="prefetch" href="<%= page.url %>" /><% end %>
+    <% pages.sort_by(&:url).reverse.each do |page| %><link rel="prefetch" href="<%= page.url %>" /><% end %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
