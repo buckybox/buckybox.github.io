@@ -36,7 +36,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.0.3)
+    eventmachine (1.0.8)
     execjs (2.2.2)
     fastimage (1.6.4)
       addressable (~> 2.3, >= 2.3.5)
@@ -159,3 +159,6 @@ DEPENDENCIES
   rake
   therubyracer
   tzinfo
+
+BUNDLED WITH
+   1.10.6
