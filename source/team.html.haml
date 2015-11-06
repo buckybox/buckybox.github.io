@@ -8,7 +8,15 @@ category: about
 
   .row.voffset
     .col-md-8.col-md-offset-2
-      %h3 Our team is made of some of the best designers, engineers, and thinkers with a passion for good food and good technology.
+      %h3 Building a new paradigm requires great people working together in powerful ways.
+
+  .row.voffset
+    .col-md-8.col-md-offset-2
+      We're a team of technologists and creative thinkers collectively holding an audacious goal and a deep sense of purpose. We work location independently, collaborating digitally from all corners of the globe, often from countries where Bucky Box is needed. We are fun-loving, dedicated and we travel often as a way of life.
+
+  .row.voffset
+    .col-md-8.col-md-offset-2
+      Excited by what we do? Collaborate with us on <a href="https://github.com/buckybox" target="_blank">GitHub</a>, let's see where it leads.
 
   #team.row.voffset
     - content_for :member do |params|
@@ -35,17 +43,15 @@ category: about
               %strong= params.fetch(:name)
             .bio= params.fetch(:bio)
 
-    = yield_content :member, name: "Will Lau", title: "CEO &middot; DESIGN &middot; JANITOR", bio: 'Founder and <s>woolly</s> multiple hat wearer, <a href="http://nz.linkedin.com/in/willdlau" target="_blank">Will</a> kickstarted the Bucky Box project after time spent founding a box scheme for a local food movement. Will likes all things beginning with S... <a href="http://danger.co.nz" target="_blank">Surf, Sail, Startups, and Social Enterprise</a>.', twitter: "dangermouse117", linked_in: "nz.linkedin.com/in/willdlau"
+    = yield_content :member, name: "Willy Woo", title: "CO-FOUNDER &middot; CEO &middot; JANITOR", bio: "Geek, Engineer, Designer, Investor and <s>woolly</s> multiple hat wearer, <a href=\"http://nz.linkedin.com/in/willdlau\" target=\"_blank\">Mr Woo</a> accidentally started Bucky Box after helping friends bootstrap a grassroots food hub. An experienced entrepreneur, Will loves all things beginning with S... <a href=\"http://danger.co.nz\" target=\"_blank\">Surf, Sail, Startups, and Social Enterprise</a>.", twitter: "dangermouse117", linked_in: "nz.linkedin.com/in/willdlau"
 
-    = yield_content :member, name: "Carlos Chambers", title: "BUSINESS DEVELOPMENT &middot; HUSTLE", bio: 'Big problems are big opportunities to hungry Carlos. Ex-farm and orchard boy turned corporate lawyer, turned Bucky Box hustler, he\'s worked in the commercial, startup business, social enterprise and NGO sectors. He eats solutions for breaky, lunch and dinner. Nom nom nom.', twitter: "CarlosChambers1", linked_in: "www.linkedin.com/in/carloschambers1"
+    = yield_content :member, name: "Cédric Félizard", title: "CO-FOUNDER &middot; CTO &middot; NOMAD", bio: "Co-founding Bucky from the land of wine and cheese, Cédric loves crafting zeros and ones while nomading any country that's interesting between the Antipodes and Timbuktu. He brings to Bucky a wealth of prior startup experience as well as the odd baguette.", github: "infertux", twitter: "infertux", linked_in: "www.linkedin.com/in/cedricfelizard"
 
-    = yield_content :member, name: "Cédric Félizard", title: "CTO &middot; ENGINEERING", bio: 'Joining Bucky from the land of wine and cheese, Cédric loves crafting zeros and ones when he\'s not skiing in his native French Alps. He brings to Bucky a wealth of prior startup experience as well as the odd baguette.', github: "infertux", twitter: "infertux", linked_in: "www.linkedin.com/in/cedricfelizard"
+    = yield_content :member, name: "Carlos Chambers", title: "BOARD &middot; ADVISOR &middot; HUSTLE", bio: "Big problems are big opportunities to hungry Carlos. Ex-farm and orchard boy turned corporate lawyer, turned environmental advocate, turned Startup CEO, he's worked in the commercial, tech startup, and NGO sectors. He eats solutions for breakie, lunch and dinner. Nom nom nom.", twitter: "CarlosChambers1", linked_in: "www.linkedin.com/in/carloschambers1"
 
-    = yield_content :member, name: "Anthony Cabraal", title: "DRUMMER &middot; HUSTLE", bio: 'With ancestry from the fabled island of <a href="https://en.wikipedia.org/wiki/Sri_Lanka" target="_blank">Serendib</a>, Ants is a prolific <a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)">borger</a> and part-time drummer. With his background in creative agencies, Ants fills the seat of ‘ideamonger’ and adds marketing know-how to the Bucky way.', linked_in: "nz.linkedin.com/in/anthonycabraal"
+    = yield_content :member, name: "Samson Ootoovak", title: "CODE MONKEY &middot; ENGINEERING", bio: "Birthed deep inside the Arctic Circle comes “The Ootoowak”. Samson wrote large parts of our original platform and plays backup engineering and to keep our systems running 24/7. Alongside fixing what's broke (like our food system), Sam has a background in robotics.", github: "https://github.com/ootoovak", twitter: "ootoovak", linked_in: "https://www.linkedin.com/in/ootoovak"
 
-    = yield_content :member, name: "Joshua Vial", title: "ANIMAL &middot; GOVERNANCE", bio: '<a href="http://www.joshuavial.com/" target="_blank">Joshua</a>, founder of <a href="http://www.enspiral.com/" target="_blank">Enspiral</a>, is hands on with Bucky governance. Programmer by training and change-maker by vocation, when he\'s not casting his reality distortion field for a brighter future, Josh goes wild on taiko drums like <a href="http://en.wikipedia.org/wiki/Animal_(Muppet)" target="_blank">Animal Muppet</a>.', twitter: "joshualvial", linked_in: "nz.linkedin.com/in/joshuavial"
+    = yield_content :member, name: "Anthony Cabraal", title: "ADVISOR &middot; INVESTOR &middot; DRUMMER", bio: "With ancestry from the fabled island of <a href=\"https://en.wikipedia.org/wiki/Sri_Lanka\" target=\"_blank\">Serendib</a>, Ants is a prolific <a href=\"https://en.wikipedia.org/wiki/Borg_(Star_Trek)\">borger</a> and part-time drummer. With his background in creative agencies, Ants fills the seat of talent scout and adds marketing know-how to the Bucky way.", linked_in: "nz.linkedin.com/in/anthonycabraal"
 
-  .row.voffset-2
-    Excited by what we do?
-    = mail_to "hello@buckybox.com?subject=How%20can%20I%20help%3F", "Have coffee with us!"
+    = yield_content :member, name: "Joshua Vial", title: "BOARD &middot; INVESTOR &middot; CULT-LEADER", bio: "<a href=\"http://www.joshuavial.com/\" target=\"_blank\">JV</a>, founder of <a href=\"http://www.enspiral.com/\" target=\"_blank\">Enspiral</a>, completed a 6 month tour of duty building Bucky Box in her formative first year and now sits on the board. Programmer by training and change-maker by vocation, when he's not casting his reality distortion field for a brighter future, Josh goes wild on taiko drums like <a href=\"http://en.wikipedia.org/wiki/Animal_(Muppet)\" target=\"_blank\">Animal Muppet</a>.", twitter: "joshualvial", linked_in: "nz.linkedin.com/in/joshuavial"
 
