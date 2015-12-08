@@ -282,15 +282,15 @@ strong
     left: 50%
     width: 4px
     margin: 0px 0px 0px -2px
-    background: #ddd
+    background: #31B5D3
 
 .year
   position: relative
   margin: 0 auto 40px
   padding: 5px
   border-radius: 4px
-  background: #ddd
-  color: #545454
+  background: #3083BF
+  color: #FFF
   line-height: 40px
   width: 100px
   height: 50px
@@ -305,8 +305,10 @@ strong
     position: relative
     .month
       color: #ddd
+      font-weight: bold
     .image
       background-repeat: no-repeat
+      background-position: center
     .image:before, .image:not(:last-child):after, .text:before, .text:not(:last-child):after
       content: " "
       margin: 0
@@ -410,6 +412,10 @@ strong
   .custom-navbar
     .btn
       font-size: inherit // smaller font so it doesn't wrap on 2 lines
+  .event
+    .row
+      .image
+        min-height: 150px !important
 
   #header
     .navbar
