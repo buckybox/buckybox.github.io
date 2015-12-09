@@ -17,14 +17,11 @@ title: Company History and Timeline
   .row.voffset
     .col-md-12.timeline
       :ruby
-        def about_image(image, min_height)
+        def about_image(image)
           image = "about/#{image}.png"
           css_path = File.join(images_dir, image)
 
-          <<-CSS.strip!
-            background-image:url('#{css_path}');
-            min-height: #{min_height || 200}px;
-          CSS
+          "background-image:url('#{css_path}')"
         end
 
       - content_for(:event) do |params|
@@ -32,16 +29,16 @@ title: Company History and Timeline
           - if params.fetch(:position) == :right
             .col-md-6.col-md-offset-6{style: "margin-top: #{params.fetch(:vertical_offset)}em"}
               .row
-                .col-sm-4.visible-sm.image{style: about_image(params.fetch(:image), params[:min_height])}
+                .col-sm-4.visible-sm.image{style: about_image(params.fetch(:image)), class: params[:extra_class]}
                 .col-xs-12.col-sm-8.text-left.text
                   %h5.month= params.fetch(:month)
                   %h4= params.fetch(:title)
                   %p.description= params.fetch(:description)
-                .col-sm-4.hidden-sm.hidden-xs.image{style: about_image(params.fetch(:image), params[:min_height])}
+                .col-sm-4.hidden-sm.hidden-xs.image{style: about_image(params.fetch(:image)), class: params[:extra_class]}
           - else
             .col-md-6{style: "margin-top: #{params.fetch(:vertical_offset)}em"}
               .row
-                .col-sm-4.hidden-xs.image{style: about_image(params.fetch(:image), params[:min_height])}
+                .col-sm-4.hidden-xs.image{style: about_image(params.fetch(:image)), class: params[:extra_class]}
                 .col-xs-12.col-sm-8.text-left.text
                   %h5.month.text-right= params.fetch(:month)
                   %h4= params.fetch(:title)
@@ -53,7 +50,7 @@ title: Company History and Timeline
       = yield_content :event,
         position: :right,
         vertical_offset: 0,
-        min_height: 300,
+        extra_class: "taller",
         title: "The Prototype",
         month: "April",
         image: "2011-prototype",
@@ -62,7 +59,7 @@ title: Company History and Timeline
       = yield_content :event,
         position: :left,
         vertical_offset: -6,
-        min_height: 250,
+        extra_class: "tall",
         title: "Starting Up",
         month: "August",
         image: "2011-startingup",
@@ -74,7 +71,7 @@ title: Company History and Timeline
       = yield_content :event,
         position: :right,
         vertical_offset: 0,
-        min_height: 250,
+        extra_class: "tall",
         title: "Bucky Box visits India",
         month: "April",
         image: "2012-india",

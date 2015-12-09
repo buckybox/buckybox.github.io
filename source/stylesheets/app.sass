@@ -309,6 +309,7 @@ strong
     .image
       background-repeat: no-repeat
       background-position: center
+      min-height: 200px
     .image:before, .image:not(:last-child):after, .text:before, .text:not(:last-child):after
       content: " "
       margin: 0
@@ -473,6 +474,15 @@ strong
       .image:after
         right: 0
 
+@media (max-width: 1199px)
+  .event
+    .row
+      .image
+        &.tall
+          min-height: 250px
+        &.taller
+          min-height: 300px
+
 @media (min-width: 1200px)
   #header
     .navbar
@@ -489,4 +499,6 @@ strong
         width: 73%
       .image
         width: 27%
+        &.taller
+          min-height: 250px
 
