@@ -39,6 +39,7 @@ configure :build do
     /\Aimages\/(email|uservoice)\/.*\Z/, # hot-linked from the help pages
     /\Aimages\/logo-bucky-grey\.png\Z/, # hot-linked from the emails
     /\Afavicon\.gif\Z/, # hot-linked from the blog
+    /\Afonts\/.*\Z/, # hard-coded in Bootstrap CSS files
     /\Aimages\/logo-buckybox\.png\Z/, # hot-linked from the blog
     /\Astylesheets\/all\.css\Z/, # hot-linked from the blog
   ]
@@ -49,7 +50,6 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-  # FIXME (maybe)
   set :relative_links, true
 end
 
