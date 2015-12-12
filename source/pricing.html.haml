@@ -2,65 +2,99 @@
 title: Pricing and Plans for NZ, Australia, UK, Europe and the World
 ---
 
-.container.text-center
-  .row
-    .col-md-6.col-md-offset-3
-      %h3 One-time charge per customer in your database
+#pricing.container
+  .row.text-center
+    .col-sm-3.col-md-4
+    .col-xs-12.col-sm-6.col-sm-6-offset-3.col-md-4.col-md-4-offset-4
+      .dropdown
+        %a{id: "pricing-selector", "data-target": "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": true, "aria-expanded": false}
+          %span.caret
+          United Kingdom Pricing (GBP)
+        %ul.dropdown-menu{"aria-labelledby": "pricing-selector", style: "right: 0"}
+          - {"United Kingdom" => "GBP", "New Zealand" => "NZD", "Europe" => "EUR", "Rest of the world" => "USD"}.each do |region, currency|
+            %li.text-center
+              = link_to "javascript:void(0)" do
+                = image_tag "pricing-#{currency.downcase}.png", height: 20
+                = "#{region} (#{currency})"
 
-      Simply pay once for every new customer that signs up, and receives a delivery or makes a payment, <strong>the first 10 customers are free</strong>.
+  .row.text-center.voffset
+    .col-sm-4
+      .panel.panel-default.casual
+        .panel-heading
+          %h3 Casual
+        .panel-body
+          .vcenter
+            %h3 2%
+            per delivery, capped at £0.25
+        .panel-footer
+          best for small or seasonal schemes
 
-  #pricing.row.voffset
-    .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-6.col-xs-offset-3
-      #pricing-toggle.row
-        %ul.nav.nav-pills.nav-justified
-          %li.active{"data-option" => "prepay100"}= link_to "Prepay x100 pack", "javascript:void(0)"
-          %li{"data-option" => "prepay25"}= link_to "Prepay x25 pack", "javascript:void(0)"
-          %li{"data-option" => "payg"}= link_to "Pay as you go", "javascript:void(0)"
+    .col-sm-4.col-sm-4-offet-4
+      .panel.panel-default.standard
+        .panel-heading
+          %h3 Standard
+        .panel-body
+          .vcenter
+            %h3 £30
+            monthly
+            %h3 +
+            %h3 0.5%
+            per delivery, capped at £0.15
+        .panel-footer
+          best for most operations
 
-    .clearfix
+    .col-sm-4.col-sm-4-offet-8
+      .panel.panel-default.unlimited
+        .panel-heading
+          %h3 Unlimited
+        .panel-body
+          .vcenter
+            %h3 £175
+            monthly
+        .panel-footer
+          best for large operations
 
-    .col-md-10.col-md-offset-1
-      #pricing-options.row.voffset
-        .col-sm-1
+    -# .clearfix
 
-        - content_for :region do |params|
-          .col-xs-6.col-sm-2.col-sm-offset-0.region{class: ('col-xs-offset-3' if params[:center])}
-            %p
-              = image_tag "pricing-#{params.fetch(:currency).downcase}.png"
-            %p
-              %small #{params.fetch(:country)}
-              - params.fetch(:prices).each do |option, price|
-                %h3.price{class: option} #{price}
-              #{params.fetch(:currency)}
-
-        = yield_content :region, country: "United Kingdom", currency: "GBP",
-          prices: {prepay100: "£2.29", prepay25: "£2.99", payg: "£3.49"}
-        = yield_content :region, country: "Australia", currency: "AUD",
-          prices: {prepay100: "$4.39", prepay25: "$5.69", payg: "$6.59"}
-        = yield_content :region, country: "New Zealand", currency: "NZD",
-          prices: {prepay100: "$4.69", prepay25: "$6.09", payg: "$6.99"}
-        = yield_content :region, country: "Europe", currency: "EUR",
-          prices: {prepay100: "€2.99", prepay25: "€3.79", payg: "€4.69"}
-        = yield_content :region, country: "Rest of World", currency: "USD",
-          prices: {prepay100: "$3.69", prepay25: "$4.79", payg: "$5.59"}, center: true
-
-  .row.voffset
+  .row.voffset.text-center
     .col-md-12
-      %a.btn.btn-lg.btn-primary.sign_up{href: "javascript:void(0)", role: "button"} Sign Up for Free
+      %a.btn.btn-lg.btn-primary.sign_up{href: "javascript:void(0)", role: "button"} Create an Account
+
+  .row.text-center
+    .col-md-12
+      Your first 21 days are free
+
+.container
+  .row.voffset
+    .col-sm-6.col-xs-12.voffset
+      %h5 How do I select my plan?
+      We'll do this for you.
+      We'll automatically charge you according to the plan which works out the least expensive for you each month.
+
+    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
+      %h5 How does the delivery fee on the Casual and Standard plans work?
+      You pay a small fee per box delivered.
+      This fee is calculated as a small percentage of the delivery or the capped value, whichever is smaller.
 
   .row
-    .col-md-12
-      Your first 10 customers are free!
+    .col-sm-6.col-xs-12.voffset
+      %h5 How do I pay?
+      Our system sends out a PayPal invoice each month which can be paid by credit card.
+      We will migrate onto credit card or direct debit in the near future depending on your location.
 
-  .row.voffset
-    .col-md-8.col-md-offset-2
-      %strong Other languages?
-      The web store, customer dashboard and emails are available in English, French and Italian,
+    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
+      %h5 Is the Unlimited plan truly unlimited?
+      Yes, on the Unlimited plan you are charged a flat rate for unlimited use, regardless of the number of deliveries you make each month.
+
+  .row
+    .col-sm-6.col-xs-12.voffset
+      %h5 Other languages?
+      The web store, customer dashboard and emails are available in English, French, Italian and Portuguese,
       we welcome
       = link_to "translations", "https://www.transifex.com/projects/p/buckybox-webstore/"
       into other languages by the community.
 
-  .row.voffset
-    .col-md-8.col-md-offset-2
-      %strong Need a custom solution?
+    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
+      %h5 Need a custom solution?
       Ask us about our #{link_to "bespoke development services", "/bespoke.html"}.
+

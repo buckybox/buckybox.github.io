@@ -234,36 +234,50 @@ strong
 // Pricing
 
 #pricing
-  @media (max-width: 479px)
-    .col-xs-offset-3
-      margin-left: 0
+  h3
+    margin: 0
+  .panel
+    border: none
+    > *
+      border: none
+    .panel-heading
+      color: #FFF
+    .panel-body
+      color: #FFF
+      height: 11em
       width: 100%
-
-#pricing-toggle
-  border-radius: 20px
-  padding: 5px
-  background-color: #ccc
-  li.active a
-    background-color: #fff
-  @media (max-width: 767px)
-    width: 200px
-    margin: auto
-  @media (min-width: 768px)
-    li:not(:last-child) a
-      margin-right: 10px
-  a
-    border-radius: 20px
-    color: #888
-    font-weight: bold
-    padding: 4px 0
-    &:hover, &:focus
-      background-color: #eee
-
-#pricing-options
-  .price + .price
-    display: none
-  .region
-    padding: 1em 0
+      display: table
+      .vcenter
+        display: table-cell
+        vertical-align: middle
+    .panel-footer
+      padding-left: 0
+      padding-right: 0
+      font-size: 13px
+    &.casual
+      .panel-heading
+        background-color: #545454
+      .panel-body
+        background-color: #999999
+      .panel-footer
+        background-color: #DDDDDD
+        color: #545454
+    &.standard
+      .panel-heading
+        background-color: #6E9C00
+      .panel-body
+        background-color: #82B600
+      .panel-footer
+        background-color: #CEE0A4
+        color: #6E9C00
+    &.unlimited
+      .panel-heading
+        background-color: #3386C0
+      .panel-body
+        background-color: #32B2D2
+      .panel-footer
+        background-color: #90D0E0
+        color: #3386C0
 
 // About
 
