@@ -4,20 +4,31 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
 
 #pricing.container
   .row.text-center
-    .col-sm-3.col-md-4
-    .col-xs-12.col-sm-6.col-sm-6-offset-3.col-md-4.col-md-4-offset-4
+    .col-sm-4
+    .col-xs-12.col-sm-4.col-sm-4-offset-4
       .dropdown
         %a{id: "pricing-selector", "data-target": "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": true, "aria-expanded": false}
           %span.caret
-          United Kingdom Pricing (GBP)
-        %ul.dropdown-menu{"aria-labelledby": "pricing-selector", style: "right: 0"}
-          - {"United Kingdom" => "GBP", "New Zealand" => "NZD", "Europe" => "EUR", "Rest of the world" => "USD"}.each do |region, currency|
-            %li.text-center
-              = link_to "javascript:void(0)" do
-                = image_tag "pricing-#{currency.downcase}.png", height: 20
-                = "#{region} (#{currency})"
+          %span.selected-label Global Pricing (USD)
+        %ul.dropdown-menu{id: "pricing-dropdown", "aria-labelledby": "pricing-selector", style: "right: 0"}
+          :ruby
+            regions = {
+              "gbp": "United Kingdom",
+              "nzd": "New Zealand",
+              "aud": "Australia",
+              "cad": "Canada",
+              "eur": "Europe",
+              "usd": "Rest of the world",
+            }
 
-  .row.text-center.voffset
+          - regions.each do |currency, region|
+            %li.text-center{"data-currency": currency}
+              = link_to "javascript:void(0)" do
+                %span.pull-right= currency.upcase
+                %span.pull-left= image_tag "pricing-#{currency}.png", height: 16, alt: ""
+                %span= region
+
+  #pricing-plans.row.text-center.voffset
     .col-sm-4
       .panel.panel-default.casual
         .panel-heading
@@ -25,7 +36,14 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
         .panel-body
           .vcenter
             %h3 2%
-            per delivery, capped at £0.25
+            %div
+              per delivery, capped at
+              %span.currency.usd $0.40
+              %span.currency.nzd $0.55
+              %span.currency.aud $0.55
+              %span.currency.cad $0.55
+              %span.currency.eur €0.35
+              %span.currency.gbp 25p
         .panel-footer
           best for small or seasonal schemes
 
@@ -35,11 +53,24 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
           %h3 Standard
         .panel-body
           .vcenter
-            %h3 £30
+            %h3
+              %span.currency.usd $70
+              %span.currency.nzd $100
+              %span.currency.aud $95
+              %span.currency.cad $95
+              %span.currency.eur €60
+              %span.currency.gbp £45
             monthly
             %h3 +
             %h3 0.5%
-            per delivery, capped at £0.15
+            %div
+              per delivery, capped at
+              %span.currency.usd $0.20
+              %span.currency.nzd $0.30
+              %span.currency.aud $0.30
+              %span.currency.cad $0.30
+              %span.currency.eur €0.20
+              %span.currency.gbp 15p
         .panel-footer
           best for most operations
 
@@ -49,12 +80,16 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
           %h3 Unlimited
         .panel-body
           .vcenter
-            %h3 £175
+            %h3
+              %span.currency.usd $275
+              %span.currency.nzd $400
+              %span.currency.aud $375
+              %span.currency.cad $375
+              %span.currency.eur €250
+              %span.currency.gbp £175
             monthly
         .panel-footer
           best for large operations
-
-    -# .clearfix
 
   .row.voffset.text-center
     .col-md-12
@@ -78,19 +113,19 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
 
   .row
     .col-sm-6.col-xs-12.voffset
+      %h5 Is the Unlimited plan truly unlimited?
+      Yes, on the Unlimited plan you are charged a flat rate for unlimited use, regardless of the number of deliveries you make each month.
+
+    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
       %h5 How do I pay?
       Our system sends out a PayPal invoice each month which can be paid by credit card.
       We will migrate onto credit card or direct debit in the near future depending on your location.
 
-    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
-      %h5 Is the Unlimited plan truly unlimited?
-      Yes, on the Unlimited plan you are charged a flat rate for unlimited use, regardless of the number of deliveries you make each month.
-
   .row
     .col-sm-6.col-xs-12.voffset
       %h5 Other languages?
-      The web store, customer dashboard and emails are available in English, French, Italian and Portuguese,
-      we welcome
+      The web store, customer dashboard and emails are available in English, French, Italian and Portuguese.
+      We welcome
       = link_to "translations", "https://www.transifex.com/projects/p/buckybox-webstore/"
       into other languages by the community.
 

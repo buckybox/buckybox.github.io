@@ -42,15 +42,13 @@ $(function() {
 
 // Pricing toggle
 $(function() {
-  $("#pricing-toggle .nav li").click(function(e) {
-    e.preventDefault();
+  $('#pricing-dropdown li').on('click', function () {
+      var currency = $(this).data("currency");
 
-    $("#pricing-toggle .nav li").removeClass("active");
-    $(this).addClass("active");
+      $('#pricing-plans .currency').hide();
+      $('#pricing-plans .currency.' + currency).show();
 
-    var option = $(this).data("option");
-    $("#pricing-options .price").hide();
-    $("#pricing-options .price." + option).show();
-  });
+      $('#pricing-selector .selected-label').html($(this).find('a').html());
+  })
 });
 
