@@ -49,6 +49,12 @@ $(function() {
       $('#pricing-plans .currency.' + currency).show();
 
       $('#pricing-selector .selected-label').html($(this).find('a').html());
-  })
+  });
+
+  $.getJSON("https://api.buckybox.com/v1/geoip/", function(geoip) {
+    var currency = geoip.currency.toLowerCase();
+
+    $('#pricing-dropdown li[data-currency=' + currency + ']').click();
+  });
 });
 
