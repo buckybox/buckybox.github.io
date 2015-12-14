@@ -42,6 +42,8 @@ $(function() {
 
 // Pricing toggle
 $(function() {
+  if (!$('#pricing-dropdown').length) return;
+
   $('#pricing-dropdown li').on('click', function () {
       var currency = $(this).data("currency");
 
