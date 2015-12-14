@@ -27,16 +27,17 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
                 %span.pull-right= currency.upcase
                 %span.pull-left= image_tag "pricing/flag-#{currency}.png", height: 16, alt: ""
                 %span= region
+                %span.description.hidden= "#{region} (#{currency.upcase})"
 
   #pricing-plans.row.text-center.voffset
     .col-sm-4
       .panel.panel-default.casual
         .panel-heading
-          %h3 Casual
+          %h2 Casual
         .panel-body
           .vcenter
-            %h3 2%
-            %div
+            %h2 2%
+            %strong
               per delivery, capped at
               %span.currency.usd $0.40
               %span.currency.nzd $0.55
@@ -50,20 +51,20 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
     .col-sm-4.col-sm-4-offet-4
       .panel.panel-default.standard
         .panel-heading
-          %h3 Standard
+          %h2 Standard
         .panel-body
           .vcenter
-            %h3
+            %h2
               %span.currency.usd $70
               %span.currency.nzd $100
               %span.currency.aud $95
               %span.currency.cad $95
               %span.currency.eur €60
               %span.currency.gbp £45
-            monthly
-            %h3 +
-            %h3 0.5%
-            %div
+            %strong monthly
+            %h2{style: "margin: 0.2em"} +
+            %h2 0.5%
+            %strong
               per delivery, capped at
               %span.currency.usd $0.20
               %span.currency.nzd $0.30
@@ -77,17 +78,17 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
     .col-sm-4.col-sm-4-offet-8
       .panel.panel-default.unlimited
         .panel-heading
-          %h3 Unlimited
+          %h2 Unlimited
         .panel-body
           .vcenter
-            %h3
+            %h2
               %span.currency.usd $275
               %span.currency.nzd $400
               %span.currency.aud $375
               %span.currency.cad $375
               %span.currency.eur €250
               %span.currency.gbp £175
-            monthly
+            %strong monthly
         .panel-footer
           best for large operations
 

@@ -50,7 +50,7 @@ $(function() {
       $('#pricing-plans .currency').hide();
       $('#pricing-plans .currency.' + currency).show();
 
-      $('#pricing-selector .selected-label').html($(this).find('a').html());
+      $('#pricing-selector .selected-label').html($(this).find('.description').html());
   });
 
   $.getJSON("https://api.buckybox.com/v1/geoip/", function(geoip) {
