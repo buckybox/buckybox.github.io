@@ -30,7 +30,7 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
                 %span.description.hidden= "#{region} (#{currency.upcase})"
 
   #pricing-plans.row.text-center.voffset
-    .col-sm-4
+    .col-sm-6
       .panel.panel-default.casual
         .panel-heading
           %h2 Casual
@@ -48,19 +48,19 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
         .panel-footer
           best for small or seasonal schemes
 
-    .col-sm-4.col-sm-4-offset-4
+    .col-sm-6.col-sm-6-offset-6
       .panel.panel-default.standard
         .panel-heading
           %h2 Standard
         .panel-body
           .vcenter
             %h2
-              %span.currency.usd $70
-              %span.currency.nzd $100
-              %span.currency.aud $95
-              %span.currency.cad $95
-              %span.currency.eur €60
-              %span.currency.gbp £45
+              %span.currency.usd $45
+              %span.currency.nzd $65
+              %span.currency.aud $65
+              %span.currency.cad $65
+              %span.currency.eur €40
+              %span.currency.gbp £35
             %strong monthly
             %h2{style: "margin: 0.2em"} +
             %h2 0.5%
@@ -74,23 +74,6 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
               %span.currency.gbp 15p
         .panel-footer
           best for most operations
-
-    .col-sm-4.col-sm-4-offset-8
-      .panel.panel-default.unlimited
-        .panel-heading
-          %h2 Unlimited
-        .panel-body
-          .vcenter
-            %h2
-              %span.currency.usd $275
-              %span.currency.nzd $400
-              %span.currency.aud $375
-              %span.currency.cad $375
-              %span.currency.eur €250
-              %span.currency.gbp £175
-            %strong monthly
-        .panel-footer
-          best for large operations
 
   .row.voffset.text-center
     .col-md-12
@@ -108,29 +91,19 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
       We'll automatically charge you according to the plan which works out the least expensive for you each month.
 
     .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
-      %h5 How does the delivery fee on the Casual and Standard plans work?
+      %h5 How does the delivery fee work?
       You pay a small fee per box delivered.
       This fee is calculated as a small percentage of the delivery or the capped value, whichever is smaller.
 
   .row
     .col-sm-6.col-xs-12.voffset
-      %h5 Is the Unlimited plan truly unlimited?
-      Yes, on the Unlimited plan you are charged a flat rate for unlimited use, regardless of the number of deliveries you make each month.
-
-    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
       %h5 How do I pay?
       Our system sends out a PayPal invoice each month which can be paid by credit card.
       We will migrate onto credit card or direct debit in the near future depending on your location.
 
-  .row
-    .col-sm-6.col-xs-12.voffset
+    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
       %h5 Other languages?
       The web store, customer dashboard and emails are available in English, Dutch, French, German, Italian and Portuguese.
       We welcome
       = link_to "translations", "https://www.transifex.com/projects/p/buckybox-webstore/"
       into other languages by the community.
-
-    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
-      %h5 Need a custom solution?
-      Ask us about our #{link_to "bespoke development services", "/bespoke.html"}.
-
