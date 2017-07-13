@@ -2,8 +2,18 @@
 title: Pricing and Plans for NZ, Australia, UK, Europe and the World
 ---
 
-#pricing.container
+.container.text-center
+  .row
+    .col-md-6.col-md-offset-3
+      %h3 Hosting Plans
+
   .row.text-center
+    .col-md-12
+      Bucky Box is #{link_to "open-source software", "http://blog.buckybox.com/2017/07/bucky-box-is-now-open-source-come-to-us-for-hosting-and-support/"}, we charge for hosting only.
+      Technical support is not included and billed separately.
+
+#pricing.container
+  .row.text-center.voffset
     .col-sm-4
     .col-xs-12.col-sm-4.col-sm-4-offset-4
       .dropdown
@@ -86,9 +96,24 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
 .container
   .row.voffset
     .col-sm-6.col-xs-12.voffset
+      %h5 What exactly does my hosting plan cover?
+      Bucky Box is open-source software which anyone with the right skills can install and run on a web application server.
+      For convenience, we are hosting the software so it's a turn-key experience for you.
+      We've designed the pricing plans to cover the server charges and maintenance.
+      We might update the software periodically.
+
+    .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
+      %h5 What if I need technical support?
+      Technical support tickets are charged at $100 USD per issue with up to 1 week turnaround time.
+      We do not anticipate many support issues as the software is very stable and has been running for years.
+      Please note that the payments importing may need technical support if the transaction export format changes (e.g. from PayPal, Internet banking or GoCardless).
+
+  .row.voffset
+    .col-sm-6.col-xs-12.voffset
       %h5 How do I select my plan?
       We'll do this for you.
-      We'll automatically charge you according to the plan which works out the least expensive for you each month.
+      We'll automatically charge you according to the plan which works out the least expensive for you after your trial period.
+      You remain free to switch to another plan at any time.
 
     .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
       %h5 How does the delivery fee work?
@@ -99,7 +124,7 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
     .col-sm-6.col-xs-12.voffset
       %h5 How do I pay?
       Our system sends out a PayPal invoice each month which can be paid by credit card.
-      We will migrate onto credit card or direct debit in the near future depending on your location.
+      New Zealand based businesses will be invoiced via Xero.
 
     .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
       %h5 Other languages?
