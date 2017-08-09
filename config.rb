@@ -3,9 +3,6 @@ ENV["TZ"] = "UTC"
 require "builder"
 page "/sitemap.xml", layout: false
 
-# https://github.com/middleman/middleman/issues/2087#issuecomment-307502952
-Haml::TempleEngine.disable_option_validator!
-
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
