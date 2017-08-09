@@ -37,6 +37,7 @@ configure :build do
   # Enable cache buster
   activate :asset_hash, ignore: [
     /\Aimages\/(email|uservoice)\/.*\Z/, # hot-linked from the help pages
+    /\Aimages\/about\/.*\Z/, # used directly as CSS background
     /\Aimages\/logo-bucky-grey\.png\Z/, # hot-linked from the emails
     /\Afavicon\.gif\Z/, # hot-linked from the blog
     /\Afonts\/.*\Z/, # hard-coded in Bootstrap CSS files

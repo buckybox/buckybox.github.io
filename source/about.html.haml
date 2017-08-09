@@ -21,7 +21,7 @@ title: Company History and Timeline
           image = "about/#{image}.png"
           css_path = File.join(images_dir, image)
 
-          "background-image:url('#{css_path}')"
+          "background-image:url(#{css_path})"
         end
 
       - content_for(:event) do |params|
