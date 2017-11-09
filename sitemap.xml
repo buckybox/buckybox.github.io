@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.buckybox.com/about.html</loc>
-    <lastmod>2017-08-09T15:33:49+00:00</lastmod>
+    <loc>http://www.buckybox.com/</loc>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
   </url>
   <url>
     <loc>http://www.buckybox.com/team.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.buckybox.com/privacy.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.buckybox.com/contact.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
+    <lastmod>2017-11-09T08:13:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://www.buckybox.com/tour.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.buckybox.com/about.html</loc>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.buckybox.com/privacy.html</loc>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
   </url>
   <url>
     <loc>http://www.buckybox.com/bespoke.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
   </url>
   <url>
     <loc>http://www.buckybox.com/pricing.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
   </url>
   <url>
     <loc>http://www.buckybox.com/security.html</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
   </url>
   <url>
-    <loc>http://www.buckybox.com/</loc>
-    <lastmod>2017-08-09T15:33:22+00:00</lastmod>
+    <loc>http://www.buckybox.com/contact.html</loc>
+    <lastmod>2017-08-09T15:36:47+00:00</lastmod>
   </url>
 </urlset>
