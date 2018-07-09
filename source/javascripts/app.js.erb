@@ -40,23 +40,23 @@ $(function() {
 });
 
 
-// Pricing toggle
+// Hosting toggle
 $(function() {
-  if (!$('#pricing-dropdown').length) return;
+  if (!$('#hosting-dropdown').length) return;
 
-  $('#pricing-dropdown li').on('click', function () {
+  $('#hosting-dropdown li').on('click', function () {
       var currency = $(this).data("currency");
 
-      $('#pricing-plans .currency').hide();
-      $('#pricing-plans .currency.' + currency).show();
+      $('#hosting-plans .currency').hide();
+      $('#hosting-plans .currency.' + currency).show();
 
-      $('#pricing-selector .selected-label').html($(this).find('.description').html());
+      $('#hosting-selector .selected-label').html($(this).find('.description').html());
   });
 
   $.getJSON("https://api.buckybox.com/v1/geoip/", function(geoip) {
     var currency = geoip.currency.toLowerCase();
 
-    $('#pricing-dropdown li[data-currency=' + currency + ']').click();
+    $('#hosting-dropdown li[data-currency=' + currency + ']').click();
   });
 });
 

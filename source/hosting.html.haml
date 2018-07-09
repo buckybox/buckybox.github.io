@@ -12,15 +12,15 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
       Bucky Box is #{link_to "open-source software", "http://blog.buckybox.com/2017/07/bucky-box-is-now-open-source-come-to-us-for-hosting-and-support/"}, we charge for hosting only.
       Technical support is not included.
 
-#pricing.container
+#hosting.container
   .row.text-center.voffset
     .col-sm-4
     .col-xs-12.col-sm-4.col-sm-4-offset-4
       .dropdown
-        %a{id: "pricing-selector", "data-target": "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": true, "aria-expanded": false}
+        %a{id: "hosting-selector", "data-target": "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": true, "aria-expanded": false}
           %span.caret
           %span.selected-label Global Pricing (USD)
-        %ul.dropdown-menu{id: "pricing-dropdown", "aria-labelledby": "pricing-selector", style: "right: 0"}
+        %ul.dropdown-menu{id: "hosting-dropdown", "aria-labelledby": "hosting-selector", style: "right: 0"}
           :ruby
             regions = {
               "gbp": "United Kingdom",
@@ -35,11 +35,11 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
             %li.text-center{"data-currency": currency}
               = link_to "javascript:void(0)" do
                 %span.pull-right= currency.upcase
-                %span.pull-left= image_tag "pricing/flag-#{currency}.png", height: 16, alt: ""
+                %span.pull-left= image_tag "hosting/flag-#{currency}.png", height: 16, alt: ""
                 %span= region
                 %span.description.hidden= "#{region} (#{currency.upcase})"
 
-  #pricing-plans.row.text-center.voffset
+  #hosting-plans.row.text-center.voffset
     .col-sm-6
       .panel.panel-default.casual
         .panel-heading
@@ -99,15 +99,16 @@ title: Pricing and Plans for NZ, Australia, UK, Europe and the World
       %h5 What exactly does my hosting plan cover?
       Bucky Box is open-source software which anyone with the right skills can install and run on a web application server.
       For convenience, we are hosting the software so it's a turn-key experience for you.
-      We've designed the pricing plans to cover the server charges and maintenance.
+      We've designed the hosting plans to cover the server charges and maintenance.
       We might update the software periodically.
 
     .col-sm-6.col-sm-6-offset-6.col-xs-12.voffset
-      %h5 What if I need technical support?
-      Bucky Box is no longer providing support directly.
-      All our code is open-source, you may hire a developer to set up your own instance of the software.
+      %h5 What if I need customer support?
+      Bucky Box does not #{link_to "provide support directly", "http://blog.buckybox.com/2018/07/reduced-service-announcement/"}.
+      Our software is open-source.
+      What this means is you can hire a developer to install the software on your own servers and modify it as necessary.
+      Due to the lack of customer support, we do not recommend Bucky Box for Local Food Enterprises without their own technical support team.
       We do not anticipate many support issues as the software is very stable and has been running for years.
-      Please note that the payments importing may need technical support if the transaction export format changes (e.g. from PayPal, Internet banking or GoCardless).
 
   .row.voffset
     .col-sm-6.col-xs-12.voffset
