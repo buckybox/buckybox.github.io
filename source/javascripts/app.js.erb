@@ -9,18 +9,6 @@ _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
-// Sign up wizard
-var _bucky_box_sign_up_wizard = _bucky_box_sign_up_wizard || [];
-
-$(function() {
-  $(".sign_up").click(function() {
-    _bucky_box_sign_up_wizard.push(['setHost', "https://<%= data.settings.sign_up_wizard_host %>"]);
-    //_bucky_box_sign_up_wizard.push(['setHost', 'http://buckybox.dev:3000']);
-    _bucky_box_sign_up_wizard.push(['show']);
-  });
-});
-
-
 // Smooth scrolling for anchors
 $(function() {
   $("a[href^='#']").on('click', function(e) {
